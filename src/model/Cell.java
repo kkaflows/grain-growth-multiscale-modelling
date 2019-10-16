@@ -7,9 +7,17 @@ public class Cell {
 
 
     boolean isAlive;
-    int id;
+    int id=0,size;
     String description;
     Color color;
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
 
     public boolean isAlive() {
         return isAlive;
@@ -41,5 +49,15 @@ public class Cell {
 
     public void setColor(Color color) {
         this.color = color;
+    }
+
+    public void fillCell(String stateString, boolean stateBoolean, int stateInt) {
+        this.description = stateString;
+        this.isAlive = stateBoolean;
+        this.id = stateInt;
+    }
+
+    public void fillCellId(int id){
+        this.id = id;
     }
 }
