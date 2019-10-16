@@ -80,7 +80,7 @@ public class MainController {
                 System.out.println("add random grain");
                 addRandomGrains();
                 drawing.drawOnCanvasFromId(graphicsContext, simulationProperties, structure);
-                StructureLoader.saveFile();
+                StructureLoader.saveStructureToText(structure, "structure");
             }
         });
         surroundingTypeChoiceBox.setItems(FXCollections.observableArrayList(

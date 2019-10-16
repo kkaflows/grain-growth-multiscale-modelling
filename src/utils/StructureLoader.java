@@ -20,12 +20,13 @@ public class StructureLoader {
                 structureToText.append(";");
                 structureToText.append(structure.getCells()[i][j].getId());
                 structureToText.append(";");
+                structureToText.append("\n");
             }
         }
 
         try (PrintStream out = new PrintStream(new FileOutputStream(filename+".txt"))) {
             String text= "text";
-            out.print(text);
+            out.print(structureToText.toString());
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
