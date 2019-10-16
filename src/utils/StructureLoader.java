@@ -25,10 +25,22 @@ public class StructureLoader {
         }
 
         try (PrintStream out = new PrintStream(new FileOutputStream(filename+".txt"))) {
-            String text= "text";
             out.print(structureToText.toString());
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+    }
+
+
+    public static Structure loadStructureFromText(String filename){
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(filename+".txt"));
+            System.out.println(reader.readLine());
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return new Structure(2,2);
     }
 }
