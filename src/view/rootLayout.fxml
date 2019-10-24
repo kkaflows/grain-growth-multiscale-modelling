@@ -20,5 +20,12 @@
       <Button fx:id="addRandomGrain" layoutX="48.0" layoutY="660.0" mnemonicParsing="false" text="Add random grain" />
       <ChoiceBox fx:id="surroundingTypeChoiceBox" layoutX="29.0" layoutY="72.0" prefWidth="150.0" />
       <Label layoutX="58.0" layoutY="50.0" text="Surrounding type" />
+      <Button fx:id="addRandomInclusions" layoutX="60.0" layoutY="194.0" mnemonicParsing="false" text="Add random inclusions" />
+      <TextField fx:id="numberOfInclusionsTextField" layoutX="31.0" layoutY="151.0" prefHeight="26.0" prefWidth="81.0" />
+      <Label layoutX="15.0" layoutY="125.0" prefHeight="18.0" prefWidth="114.0" text="Number of Inclusions" />
+      <Label layoutX="153.0" layoutY="125.0" text="Size of inclusion" />
+      <TextField fx:id="sizeOfInclusionTextField" layoutX="147.0" layoutY="151.0" prefHeight="26.0" prefWidth="97.0" />
+      <Button fx:id="getAddRandomInclusionsOnEdgeOfGrain" layoutX="37.0" layoutY="236.0" mnemonicParsing="false" text="Add inclusions on edge of grain" />
+      <Button fx:id="saveStructureToBmp" layoutX="842.0" layoutY="660.0" mnemonicParsing="false" text="Save Structure to BMP" />
    </children>
 </AnchorPane>

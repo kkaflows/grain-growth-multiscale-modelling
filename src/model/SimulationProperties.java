@@ -20,6 +20,7 @@ public class SimulationProperties {
         columns = canvasHeight / sizeOfGrain;
         colorHashMap = new HashMap<>();
         colorHashMap.put(0, Color.rgb(255, 255, 255));
+        colorHashMap.put(-1, Color.rgb(0, 0, 0));
     }
 
 
