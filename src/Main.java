@@ -1,16 +1,18 @@
+package sample;
+
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-
 public class Main extends Application {
 
-    Stage primaryStage;
+    static Stage primaryStage;
     AnchorPane rootLayout;
 
     @Override
@@ -25,7 +27,7 @@ public class Main extends Application {
     private void initRootLayout() {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("view/rootLayout.fxml"));
+            loader.setLocation(Main.class.getResource("rootLayout.fxml"));
             rootLayout = loader.load();
 
             Scene scene = new Scene(rootLayout);
@@ -47,7 +49,7 @@ public class Main extends Application {
         launch(args);
     }
 
-    public Stage getPrimaryStage() {
+    public static Stage getPrimaryStage() {
         return primaryStage;
     }
 }
