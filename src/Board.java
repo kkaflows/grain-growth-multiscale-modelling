@@ -27,6 +27,15 @@ public class Board {
         cells[i][j].setId(id);
     }
 
+
+    public boolean getCellIsRecrystalised(int i, int j){
+        return cells[i][j].isRecrystalised();
+    }
+
+    public void setCellIsRecrystilised(int i, int j, boolean isRecrystalised){
+        cells[i][j].setRecrystalised(isRecrystalised);
+    }
+
     public boolean isBoardFull(int rows, int columns){
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {

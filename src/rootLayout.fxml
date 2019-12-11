@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 
-<AnchorPane prefHeight="700.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane prefHeight="700.0" prefWidth="1181.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
         <Canvas fx:id="canvas" height="400.0" layoutX="425.0" layoutY="112.0" width="400.0" />
       <Button fx:id="runSimulationButton" layoutX="40.0" layoutY="12.0" mnemonicParsing="false" text="Run Simulation" />
@@ -29,7 +29,7 @@
       <Label layoutX="10.0" layoutY="289.0" prefHeight="25.0" prefWidth="115.0" text="Number of inclusions" />
       <Label layoutX="153.0" layoutY="294.0" text="Inclusion type" />
       <ChoiceBox fx:id="inclusionTypeChoiceBox" layoutX="149.0" layoutY="313.0" prefHeight="25.0" prefWidth="83.0" />
-      <ChoiceBox fx:id="neighbouthoodTypeChoiceBox" layoutX="187.0" layoutY="37.0" prefHeight="25.0" prefWidth="83.0" />
+      <ChoiceBox fx:id="neighbourhoodTypeChoiceBox" layoutX="187.0" layoutY="37.0" prefHeight="25.0" prefWidth="83.0" />
       <Label layoutX="176.0" layoutY="16.0" text="Neighbourhood type" />
       <Label layoutX="269.0" layoutY="294.0" text="Inclusion size" />
       <TextField fx:id="inclusionSizeTextField" layoutX="276.0" layoutY="312.0" prefHeight="25.0" prefWidth="58.0" />
@@ -56,5 +56,40 @@
       <Line endX="300.0" layoutX="100.0" layoutY="264.0" startX="-100.0" strokeWidth="3.0" />
       <Label layoutX="117.0" layoutY="413.0" text="Click on structure to select grain" />
       <Line endX="300.0" layoutX="100.0" layoutY="180.0" startX="-100.0" strokeWidth="3.0" />
+      <Line endX="400.0" endY="700.0" layoutX="457.0" layoutY="3.0" startX="400.0" strokeWidth="3.0" />
+      <Label layoutX="991.0" layoutY="7.0" text="Monte Carlo" />
+      <TextField fx:id="numberOfRandomNucleonsMCTextField" layoutX="884.0" layoutY="63.0" prefHeight="25.0" prefWidth="58.0" />
+      <TextField fx:id="grainBoundaryEnergyTextField" layoutX="966.0" layoutY="63.0" prefHeight="25.0" prefWidth="58.0" />
+      <Label layoutX="880.0" layoutY="42.0" text="No of grains" />
+      <Label layoutX="969.0" layoutY="42.0" text="GB energy &lt;0.1, 1.0&gt;" />
+      <Button fx:id="fillWholeBoardWithRandomGrainsButton" layoutX="913.0" layoutY="102.0" mnemonicParsing="false" text="Fill whole board with random grains" />
+      <TextField fx:id="numberOfMCSimulationsTextField" layoutX="884.0" layoutY="164.0" prefHeight="25.0" prefWidth="58.0" />
+      <Label layoutX="872.0" layoutY="143.0" text="MC simulations" />
+      <Button fx:id="runSimulationMCButton" layoutX="996.0" layoutY="164.0" mnemonicParsing="false" text="Run Simulation" />
+      <Label layoutX="963.0" layoutY="209.0" text="Energy distribution" />
+      <TextField fx:id="energyOnGrainsTextField" layoutX="886.0" layoutY="257.0" prefHeight="26.0" prefWidth="66.0" />
+      <TextField fx:id="energyOnBoundariesTextField" layoutX="1034.0" layoutY="255.0" prefHeight="26.0" prefWidth="66.0" />
+      <Label layoutX="869.0" layoutY="232.0" text="Energy on grains" />
+      <Label layoutX="1023.0" layoutY="231.0" text="Energy on boundaries" />
+      <Button fx:id="distributeEnergyButton" layoutX="1046.0" layoutY="345.0" mnemonicParsing="false" text="Distribute energy" />
+      <Button fx:id="showDistributedEnergyButton" layoutX="873.0" layoutY="389.0" mnemonicParsing="false" text="Show distributed energy" />
+      <TextField fx:id="thresholdTextField" layoutX="965.0" layoutY="314.0" prefHeight="26.0" prefWidth="66.0" />
+      <Label layoutX="953.0" layoutY="288.0" text="Threshold &lt;0.1, 1.0&gt;" />
+      <RadioButton fx:id="homogenousRadioButton" layoutX="875.0" layoutY="349.0" mnemonicParsing="false" text="HOMO" />
+      <RadioButton fx:id="heterogenousRadioButton" layoutX="958.0" layoutY="349.0" mnemonicParsing="false" text="HETERO" />
+      <Button fx:id="showBoardButton" layoutX="1053.0" layoutY="386.0" mnemonicParsing="false" text="Show board" />
+      <Line endX="300.0" layoutX="957.0" layoutY="441.0" startX="-100.0" strokeWidth="3.0" />
+      <Line endX="300.0" layoutX="957.0" layoutY="203.0" startX="-100.0" strokeWidth="3.0" />
+      <ChoiceBox fx:id="numberOfNucleonsRecrystalisationTypeChoiceBox" layoutX="869.0" layoutY="510.0" prefWidth="150.0" />
+      <Label layoutX="875.0" layoutY="482.0" text="Number of nucleons type:" />
+      <Label layoutX="1025.0" layoutY="482.0" text="Number of nucleons:" />
+      <Label layoutX="1005.0" layoutY="450.0" text="Recrystalisation" />
+      <TextField fx:id="numberOfNucleonsRecrystalisationTextField" layoutX="1041.0" layoutY="509.0" prefHeight="26.0" prefWidth="74.0" />
+      <ChoiceBox fx:id="locationOfNucleonsRecrystalisationTypeChoiceBox" layoutX="1148.0" layoutY="509.0" prefHeight="26.0" prefWidth="101.0" />
+      <Label layoutX="1154.0" layoutY="481.0" text="Nucleons location" />
+      <Button fx:id="recrystaliseButton" layoutX="1061.0" layoutY="568.0" mnemonicParsing="false" text="Recrystalise" />
+      <Label layoutX="873.0" layoutY="550.0" text="MC Recrystalisation Simulations" />
+      <TextField fx:id="numberOfMCRecrystalisationSimulationsTextField" layoutX="916.0" layoutY="580.0" prefHeight="26.0" prefWidth="74.0" />
+      <Button fx:id="addRecrystalisedNucleonsButton" layoutX="879.0" layoutY="629.0" mnemonicParsing="false" text="Add recrystalised nucleons" />
     </children>
 </AnchorPane>
